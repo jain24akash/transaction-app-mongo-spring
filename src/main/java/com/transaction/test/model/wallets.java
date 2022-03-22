@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -21,7 +20,7 @@ public class wallets implements Serializable {
     @Id
     private String id;
     private float balance;
-    
+
     @CreatedDate
     private Date date;
     private String name;
@@ -69,6 +68,4 @@ public class wallets implements Serializable {
     public void setDate(Date date) {
         this.date = date;
     }
-
-
 }
