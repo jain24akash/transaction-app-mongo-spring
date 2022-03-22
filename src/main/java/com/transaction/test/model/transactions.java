@@ -9,6 +9,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -24,7 +25,7 @@ public class transactions implements Serializable {
     private String description;
     private String type;
     @CreatedDate
-    private String date;
+    private Date date;
 
     public String getId() {
         return id;
@@ -74,11 +75,11 @@ public class transactions implements Serializable {
         this.type = type;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
