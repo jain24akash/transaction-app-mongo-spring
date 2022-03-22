@@ -18,7 +18,7 @@ import java.util.Date;
 @Document
 public class transactions implements Serializable {
     @Id
-    private String id;
+    private String _id;
     private String walletId;
     private float amount;
     private float balance;
@@ -28,11 +28,11 @@ public class transactions implements Serializable {
     private Date date;
 
     public String getId() {
-        return id;
+        return _id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String _id) {
+        this._id = _id;
     }
 
     public String getWalletId() {
@@ -86,7 +86,7 @@ public class transactions implements Serializable {
     @Override
     public String toString() {
         return "transactions{" +
-                "id='" + id + '\'' +
+                "id='" + _id + '\'' +
                 ", walletId='" + walletId + '\'' +
                 ", amount=" + amount +
                 ", balance=" + balance +
